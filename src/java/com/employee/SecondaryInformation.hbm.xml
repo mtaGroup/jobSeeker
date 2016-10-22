@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Sep 26, 2016 7:15:11 AM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="com.employee.SecondaryInformation" table="secondary_information" catalog="jobseeker" optimistic-lock="version">
+        <id name="id" type="int">
+            <column name="id" />
+            <generator class="assigned" />
+        </id>
+        <many-to-one name="primaryInformation" class="com.employee.PrimaryInformation" fetch="select">
+            <column name="email" />
+        </many-to-one>
+        <property name="ljtitle" type="string">
+            <column name="ljtitle" length="20" />
+        </property>
+        <property name="cname" type="string">
+            <column name="cname" length="20" />
+        </property>
+        <property name="startdate" type="date">
+            <column name="startdate" length="10" />
+        </property>
+        <property name="enddate" type="date">
+            <column name="enddate" length="10" />
+        </property>
+        <property name="district" type="string">
+            <column name="district" length="20" />
+        </property>
+        <property name="country" type="string">
+            <column name="country" length="20" />
+        </property>
+    </class>
+</hibernate-mapping>
