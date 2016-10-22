@@ -74,5 +74,9 @@ public class PrimaryPage extends HttpServlet {
     public String getServletInfo() {
         return "Short description";
     }// </editor-fold>
+    
+    public void onChange(){
+    
+    }
 
 }
